@@ -1,6 +1,4 @@
- movie_controller.rb
- 
- class MoviesController < ApplicationController
+class MoviesController < ApplicationController
   def show
     id = params[:id] # retrieve movie ID from URI route
     @movie = Movie.find(id) # look up movie by unique ID
@@ -78,7 +76,3 @@
     redirect_to movies_path(:ratings=>session[:ratings],:sort=>session[:sort])
   end
 end
-
-
-
-
